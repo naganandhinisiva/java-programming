@@ -1,0 +1,20 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int p=sc.nextInt();
+        int q=sc.nextInt();
+        int r=sc.nextInt();
+        int s=sc.nextInt();
+        System.out.printf("Binoy's house is located at ("+(float)(p+r)/2+","+(float)(q+s)/2+")");
+        
+        
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    }
+}
