@@ -12,7 +12,7 @@ public class Solution {
         if(n>99 && n<1000){
             int l=n%10;
             int f=n/100;
-            if(f==1){
+            if(f==l){
                 System.out.println("palindrome");
             }
             else{
