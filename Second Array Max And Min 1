@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int[] a = new int[n];
+        for (int i = 0; i < n; i++) a[i] = sc.nextInt();
+        Integer le = null, se = null; 
+        Integer so = null, sso = null; 
+        for (int i = 0; i < n; i++) {
+            int v = a[i];
+            if (i % 2 == 0) { 
+                if (le == null || v > le) { se = le; le = v; }
+                else if (se == null || v > se) se = v;
+            } else { 
+                if (so == null || v < so) { sso = so; so = v; }
+                else if (sso == null || v < sso) sso = v;}}
+        int sum = (se != null ? se : 0) + (sso != null ? sso : 0);
+        System.out.println("Sum=" + sum);
+    }
+}
