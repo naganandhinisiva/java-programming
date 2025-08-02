@@ -1,0 +1,23 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine().trim();
+        int stars = 0, hashes = 0;
+        for (char c : s.toCharArray()) {
+            if (c == '*') stars++;
+            else if (c == '#') hashes++; }
+        int diff = stars - hashes;
+        if (diff == 0) {
+            System.out.print("0");
+        } else {
+            int abs = Math.abs(diff);
+            String formatted;
+            if (abs % 2 == 0) {
+                formatted = String.format("%02d", abs);
+            } else {
+                formatted = String.format("%03d", abs);}
+            if (diff < 0) formatted = "-" + formatted;
+            System.out.print("The Difference of the character in the given string: " + formatted);  }
+    }
+}
