@@ -1,0 +1,23 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+    public static int countDigits(int n) {
+        if (n == 0) return 0;
+        return 1 + countDigits(n / 10);}
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+        if (num == 0) {
+            System.out.println("The Count the digits: 1");
+        } else {
+            int count = countDigits(Math.abs(num));
+            System.out.println("The Count the digits: " + count);
+        }
+
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    }
+}
