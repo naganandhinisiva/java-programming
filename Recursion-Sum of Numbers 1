@@ -1,0 +1,21 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+    public static int sumRec(int n) {
+        if (n == 1) return 1;
+        return n + sumRec(n - 1); }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+        if (num < 1 || num > 50) {
+            System.out.println("Enter a Valid Input!!!!!!!!!!!!!!!!!!");
+        } else {
+            int sum = sumRec(num);
+            System.out.printf("The sum of numbers from 1 to %d : %04d", num, sum);}
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    }
+}
