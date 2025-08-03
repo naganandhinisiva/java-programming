@@ -1,0 +1,24 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine();
+        int[] count = new int[256];   
+        boolean[] seen = new boolean[256]; 
+        List<Character> order = new ArrayList<>();
+        for (char c : s.toCharArray()) {
+            if (!seen[c]) {
+                order.add(c);
+                seen[c] = true; }
+            count[c]++;}
+
+        for (char c : order) {
+            System.out.println(c + "   " + count[c]); }
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    }
+}
