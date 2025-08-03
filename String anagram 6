@@ -1,0 +1,25 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+    public static boolean isAnagram(String a, String b) {
+        if (a.length() != b.length()) return false;
+        char[] ca = a.toCharArray();
+        char[] cb = b.toCharArray();
+        Arrays.sort(ca);
+        Arrays.sort(cb);
+        return Arrays.equals(ca, cb);}
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String s1 = sc.nextLine();
+        String s2 = sc.nextLine();
+        if (isAnagram(s1, s2)) {
+            System.out.println("The given strings are an anagram");
+        } else {
+            System.out.println("The given strings are not an anagram");}
+/* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    }
+}
